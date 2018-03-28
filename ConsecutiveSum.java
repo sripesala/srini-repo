@@ -15,5 +15,21 @@ public class ConsecutiveSum {
         }
 		return count;
 	}
+	
+	public static void main(String[] args) throws Exception{
+		if(args.length >1 )
+			throw new Exception("One input value expected");
+		int i = 0;
+		try {
+			i = Integer.parseInt(args[0]);
+		}catch (NumberFormatException e) {
+			throw new Exception("Input not valid");
+		}
+		int count = consecutive(i);
+		System.out.println(count); 		
+	}
+
 
 }
+
+
